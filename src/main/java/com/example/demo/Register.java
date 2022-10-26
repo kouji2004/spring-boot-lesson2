@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Register {
-	public class Register{
+		
 		@RequestMapping("/")
 		public String start() {
 			return "lesson";
@@ -15,10 +15,9 @@ public class Register {
 		
 		@RequestMapping("/register")
 		public ModelAndView register
-			(@ModelAttribute RegisterBean rb, ModelAndview m) {
+			(@ModelAttribute RegisterBean rb, ModelAndView m) {
 			m.addObject("rb",rb);
-			m.setViewName("register.thml");
-			retun m;
+			m.setViewName("register.html");
+			return m;
 		}
-	}
 }
